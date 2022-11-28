@@ -88,6 +88,11 @@ const internQuestions = [{
 },
 ];
 
+function writeToFile(fileName, data) {
+console.log(`writeToFile`);
+return fs.writeFileSync(fileName, data)
+}
+
 function init() {
     inquirer.prompt(managerQuestions)
         .then(data => {
@@ -132,6 +137,9 @@ function questionchoices() {
             } else if (data.selection == `exit`) {
                 
               generateHTML(employeeStorage);
+            } else if (data.selection== `exit`) {
+                writeToFile (`./dist/index.html`, generateHTML({...data }))
+                console.log(`your profile has been made!`)
             }
         }) 
     }
@@ -159,7 +167,12 @@ function generateHTML(employeeStorage) {
     </body>\
     </html>';
     sFullHTML+=sHtmlHeader;
-    //TODO:loop employeeStorage
+    //TODO:loop of employee storage
+    for (const employeeStorage of employeeStorage) {
+  output(employeeStorage);
+}
+
+
     sFullHTML+=cardGenerator({});
 
     sFullHTML+=sHtmlFooter;
@@ -174,8 +187,8 @@ function generateHTML(employeeStorage) {
         cardGenerator(data), 
         (err)=>{
             err ? console.log(err) :
-            console.log(`Success!`)
-        }) 
+            console.log(`Success!`);
+        }
       }
 }
 
