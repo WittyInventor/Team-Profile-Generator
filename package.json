@@ -1,0 +1,33 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "creating a team generator website for employees and performing passing tests in the backend.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WittyInventor/Team-Profile-Generator.git"
+  },
+  "keywords": [
+    "generator",
+    "website",
+    "team"
+  ],
+  "author": "Annemarie Sheridan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WittyInventor/Team-Profile-Generator/issues"
+  },
+  "homepage": "https://github.com/WittyInventor/Team-Profile-Generator#readme",
+  "devDependencies": {
+    "jest": "^29.3.1"
+  },
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  }
+}
