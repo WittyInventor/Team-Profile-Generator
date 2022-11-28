@@ -8,6 +8,8 @@ const Intern = require("./lib/Intern")
 
 const fs = require("fs")
 
+const generateHTML = require('./src/page-template.js')
+
 
 let employeeStorage = []
 
