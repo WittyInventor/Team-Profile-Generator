@@ -164,6 +164,10 @@ function generateHTML(employeeStorage) {
     console.log(sFullHTML);
     // write the sFullHTML in to a file- ASK about this:
     function sFullHTML(employeeStorage, data) {
+        fs.writeFileSync(sFullHTML, data, "employeeStorage") 
+        console.log("File written successfully\n");
+        console.log("The written has the sFullHTML:");
+
         fs.sFullHTML(employeeStorage), 
         cardGenerator(data), 
         (err)=>{
@@ -172,6 +176,7 @@ function generateHTML(employeeStorage) {
         }) 
       }
 }
+
 
 function cardGenerator(oEmployee) {
     // TO DO: change the values to the match employee information
